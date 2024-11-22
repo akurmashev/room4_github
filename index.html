@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+    <span id="clock"></span>
+
 </head>
 <body>
     <h1>Hello, World!</h1>
+
+    <script>
+        var clockElement = document.getElementById( "clock" );
+
+        function updateClock ( clock ) {
+            clock.innerHTML = new Date().toLocaleTimeString();
+        }
+
+        setInterval(function () {
+            updateClock( clockElement );
+        }, 1000);
+
+
+        
+    </script>
 </body>
 </html>
